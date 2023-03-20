@@ -1,0 +1,12 @@
+import '../styles/Header.scss';
+import Header from '../components/Header';
+
+function Home() {
+  return (
+    <div className="home">
+      <Header />
+    </div>
+  );
+}
+
+export default Home;
