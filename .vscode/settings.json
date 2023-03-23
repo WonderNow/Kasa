@@ -1,0 +1,8 @@
+{
+  "prettier.requireConfig": true,
+  "editor.formatOnSave": true,
+  "files.trimFinalNewlines": false,
+  "prettier.semi": true,
+  "files.insertFinalNewline": true,
+  "editor.renderFinalNewline": "on"
+}

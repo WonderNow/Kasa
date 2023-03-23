@@ -36,7 +36,9 @@ header {
         text-transform: uppercase;
         font-size: 12px;
       }
-      &:hover, :focus, :active {
+      &:hover,
+      :focus,
+      :active {
         text-decoration: underline;
       }
     }
