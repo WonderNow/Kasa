@@ -1,0 +1,44 @@
+header {
+  position: relative;
+  width: 100vw;
+  height: calc(113px + 3vh);
+  // background-color: red;
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: 500px) {
+    height: calc(70px + 2vh);
+  }
+  nav {
+    width: 86vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 500px) {
+      width: 89vw;
+    }
+  }
+  .kasa-logo {
+    width: 15vw;
+    min-width: 130px;
+    max-width: 210px;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    li {
+      margin-left: 3.5vw;
+      color: $couleur-primaire;
+      font-size: calc(7px + 1.2vw);
+      @media screen and (min-width: 1440px) {
+        font-size: 24px;
+      }
+      @media screen and (max-width: 500px) {
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+      &:hover, :focus, :active {
+        text-decoration: underline;
+      }
+    }
+  }
+}
