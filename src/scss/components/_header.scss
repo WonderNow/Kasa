@@ -1,6 +1,5 @@
 header {
   position: relative;
-  width: 100vw;
   height: calc(113px + 3vh);
   // background-color: red;
   display: flex;
@@ -8,6 +7,9 @@ header {
   @media screen and (max-width: 500px) {
     height: calc(70px + 2vh);
   }
+  .active{
+    text-decoration: underline;
+  }  
   nav {
     width: 86vw;
     display: flex;

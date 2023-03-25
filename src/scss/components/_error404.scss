@@ -1,0 +1,57 @@
+.error404-container {
+  height: 86vh;
+  // background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  @media screen and (max-width: 500px) {
+    height: 91vh;
+  }
+  .error404-message {
+    width: 86vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (max-width: 500px) {
+      width: 89vw;
+    }
+    .only-404 {
+      font-size: 20vw;
+      font-weight: 700;
+      color: $couleur-primaire;
+      @media screen and (min-width: 1440px) {
+        font-size: 288px;
+      }
+      @media screen and (max-width: 500px) {
+        font-size: 96px;
+      }
+    }
+    .text-under-404 {
+      font-size: calc(10px + 1.8vw);
+      font-weight: 500;
+      width: 80vw;
+      @media screen and (min-width: 1440px) {
+        font-size: 36px;
+      }
+      @media screen and (max-width: 500px) {
+        font-size: 18px;
+        margin-top: 5vw;
+        width: 80vw;
+      }
+    }
+  }
+  .link-to-home-container {
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    font-size: 18px;
+    text-decoration: underline;
+    @media screen and (max-width: 950px) {
+      font-size: 16px;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 14px;
+    }
+  }
+}
