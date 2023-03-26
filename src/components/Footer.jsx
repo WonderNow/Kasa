@@ -1,11 +1,12 @@
 import logo from '../assets/logo-footer.png';
+import { NavLink } from 'react-router-dom';
 
 function footer() {
   return (
     <footer className="footer">
-      <a href="/">
+      <NavLink to="/">
         <img src={logo} alt="Logo de Kasa" className="kasa-logo" />
-      </a>
+      </NavLink>
       <p>© 2023 Kasa. All rights reserved</p>
     </footer>
   );

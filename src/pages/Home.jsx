@@ -1,13 +1,12 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import HeroBanner from '../components/HeroBanner';
 
 function Home() {
   return (
     <div className="home-page">
       <Header />
-      <section>
-        <p>Ceci est le contenu de la page "Accueil".</p>
-      </section>
+      <HeroBanner className="home-banner" />
       <Footer />
     </div>
   );

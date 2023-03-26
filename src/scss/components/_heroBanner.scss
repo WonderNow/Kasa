@@ -1,0 +1,35 @@
+.hero-banner {
+  background-size: cover;
+  width: 86vw;
+  height: 22vh;
+  margin: 0 auto;
+  border-radius: 25px;
+}
+
+.home-banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../assets/home-hero-banner-image.png) no-repeat center
+    center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    margin: 0 4vw;
+    color: #fff;
+    font-size: calc(15px + 2.3vw);
+    font-weight: 500;
+    @media screen and (min-width: 1440px) {
+      font-size: 48px;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 24px;
+    }
+  }
+}
+
+.about-banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../assets/about-hero-banner-image.png) no-repeat center
+    center;
+  h1 {
+    display: none;
+  }
+}

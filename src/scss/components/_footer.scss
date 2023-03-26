@@ -1,6 +1,7 @@
 footer {
-  position: relative; // absolute pour fixer en bas de l'écran;
-  // bottom: 0;
+  position: absolute; // absolute pour fixer en bas de l'écran;
+  bottom: 0;
+  width: 100vw;
   height: calc(200px + 0.2vw);
   background-color: #000;
   display: flex;
