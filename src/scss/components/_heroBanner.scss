@@ -1,17 +1,14 @@
-.hero-banner {
-  background-size: cover;
-  width: 86vw;
-  height: 22vh;
-  margin: 0 auto;
-  border-radius: 25px;
-}
-
 .home-banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../assets/home-hero-banner-image.png) no-repeat center
-    center;
+  height: 22vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../../assets/home-hero-banner-image-resized.png);
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 500px) {
+    height: 14vh;
+    justify-content: left;
+  }
   h1 {
     margin: 0 4vw;
     color: #fff;
@@ -22,14 +19,36 @@
     }
     @media screen and (max-width: 500px) {
       font-size: 24px;
+      br {
+        display: initial;
+      }
     }
   }
 }
 
 .about-banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../assets/about-hero-banner-image.png) no-repeat center
-    center;
+  height: 22vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../../assets/about-hero-banner-image.png);
+    @media screen and (max-width: 500px) {
+      height: 27vh;
+    }
   h1 {
     display: none;
+  }
+}
+
+.hero-banner {
+  width: 86vw;
+  max-height: 223px;
+  margin: 0 auto;
+  border-radius: 25px;
+  background-position: center;
+  background-size: cover;
+  br {
+    display: none;
+  }
+  @media screen and (max-width: 500px) {
+    width: 89vw;
   }
 }

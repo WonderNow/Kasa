@@ -6,7 +6,9 @@ function Home() {
   return (
     <div className="home-page">
       <Header />
-      <HeroBanner className="home-banner" />
+      <main>
+        <HeroBanner className="home-banner" />
+      </main>
       <Footer />
     </div>
   );
