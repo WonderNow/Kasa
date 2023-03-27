@@ -17,6 +17,13 @@ body {
   height: 100%;
 }
 
+main {
+  min-height: 87vh;
+  @media screen and (max-width: 500px) {
+    min-height: 91vh;
+  }
+}
+
 html,
 body,
 div,

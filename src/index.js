@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Home from './pages/Home';
+import FicheLogement from './pages/FicheLogement';
 import About from './pages/About';
 import './scss/main.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -12,6 +13,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/logement/:id" element={<FicheLogement />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>

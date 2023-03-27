@@ -1,17 +1,16 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import HeroBanner from '../components/HeroBanner';
 
-function About() {
+function FicheLogement() {
   return (
-    <div className="about-page">
+    <div className="fiche-logement-page">
       <Header />
       <main>
-        <HeroBanner className="about-banner" />
+        <h1>Fiche Logement</h1>
       </main>
       <Footer />
     </div>
   );
 }
 
-export default About;
+export default FicheLogement;
