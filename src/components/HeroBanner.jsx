@@ -1,5 +1,3 @@
-
-
 function HeroBanner(props) {
   return (
     <div className={"hero-banner " + props.className}>

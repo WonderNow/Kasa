@@ -30,9 +30,9 @@
   height: 22vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(../../assets/about-hero-banner-image.png);
-    @media screen and (max-width: 500px) {
-      height: 27vh;
-    }
+  @media screen and (max-width: 500px) {
+    height: 27vh;
+  }
   h1 {
     display: none;
   }
@@ -41,7 +41,7 @@
 .hero-banner {
   width: 86vw;
   max-height: 223px;
-  margin: 0 auto;
+  margin: 0 auto 5vh auto;
   border-radius: 25px;
   background-position: center;
   background-size: cover;
@@ -50,5 +50,6 @@
   }
   @media screen and (max-width: 500px) {
     width: 89vw;
+    margin: 0 auto 3.5vh auto;
   }
 }

@@ -1,0 +1,44 @@
+.gallery-container {
+  width: 86vw;
+  min-height: 50vh;
+  margin: 0 auto 5vh;
+  padding: 3vw 2vw;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  color: #fff;
+  @media screen and (max-width: 500px) {
+    width: 89vw;
+    padding: 0;
+    background-color: #ffffff00;
+    gap: 25px;
+  }
+  .location {
+    width: 340px;
+    height: 340px;
+    background: linear-gradient(
+        180deg,
+        rgba(39, 32, 32, 0) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+      ); // Remplacer ; par , et retirer le //commentaire ci-dessous
+      // url(../../assets/about-hero-banner-image.png);
+    background-position: center;
+    background-size: cover;
+    background-color: #ff6060;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    @media screen and (max-width: 500px) {
+      width: 335px;
+      height: 255px;
+    }
+    p {
+      margin: 0 20% 6% 6%;
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+}
