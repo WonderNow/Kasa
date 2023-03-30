@@ -17,28 +17,48 @@
     gap: 25px;
   }
   .location {
+    position: relative;
     width: 340px;
     height: 340px;
-    background: linear-gradient(
-        180deg,
-        rgba(39, 32, 32, 0) 0%,
-        rgba(0, 0, 0, 0.5) 100%
-      ); // Remplacer ; par , et retirer le //commentaire ci-dessous
-      // url(../../assets/about-hero-banner-image.png);
-    background-position: center;
-    background-size: cover;
-    background-color: #ff6060;
     border-radius: 10px;
+    overflow: hidden;
     display: flex;
     align-items: flex-end;
+    transition: all .6s;
+    &:hover {
+      &:before {
+        opacity: 80%;
+      }
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+      z-index: 2;
+      pointer-events: none;
+      transition: all .6s;
+    }
     @media screen and (max-width: 500px) {
       width: 335px;
       height: 255px;
     }
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
     p {
-      margin: 0 20% 6% 6%;
+      position: absolute;
+      width: 100%;
+      margin: 0 0 6% 6%;
+      padding-right: 20%;
       font-size: 18px;
       line-height: 26px;
+      z-index: 3;
     }
   }
 }

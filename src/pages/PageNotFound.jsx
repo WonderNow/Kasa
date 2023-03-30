@@ -9,7 +9,7 @@ function PageNotFound() {
       <Header />
       <Error404 />
       <Footer />
-      </React.Fragment>
+    </React.Fragment>
   );
 }
 

@@ -11,7 +11,7 @@ function About() {
         <HeroBanner className="about-banner" />
       </main>
       <Footer />
-      </React.Fragment>
+    </React.Fragment>
   );
 }
 

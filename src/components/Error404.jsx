@@ -10,9 +10,7 @@ function error404() {
         </p>
       </div>
       <div className="link-to-home-container">
-        <Link to="/#top">
-          Retourner sur la page d'accueil
-        </Link>
+        <Link to="/">Retourner sur la page d'accueil</Link>
       </div>
     </div>
   );
