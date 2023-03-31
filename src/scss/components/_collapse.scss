@@ -4,6 +4,7 @@
   margin: 0 auto 2vw auto;
   @media screen and (max-width: 500px) {
     width: 89vw;
+    margin: 0 auto 6vw auto;
   }
   &__head {
     user-select: none;
@@ -76,11 +77,12 @@
       border-radius: 0 0 5px 5px;
       padding: 2vw 12px 1.2vw 12px;
       @media screen and (max-width: 950px) {
-        max-height: 15vw;
+        padding: 3vw 12px 3.5vw 12px;
+        max-height: 17vw;
       }
       @media screen and (max-width: 500px) {
-        padding: 2.4vw 12px 1.2vw 12px;
-        max-height: 20vw;
+        padding: 4vw 12px 5vw 12px;
+        max-height: 35vw;
       }
       p {
         visibility: visible;
