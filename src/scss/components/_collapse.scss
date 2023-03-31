@@ -1,11 +1,12 @@
 .collapse-container {
   width: 71vw;
   height: auto;
-  margin: 0 auto;
+  margin: 0 auto 2vw auto;
   @media screen and (max-width: 500px) {
     width: 89vw;
   }
   &__head {
+    user-select: none;
     height: 47px;
     border-radius: 5px;
     display: flex;
@@ -13,11 +14,17 @@
     align-items: center;
     background-color: $couleur-primaire;
     padding: 0 2.5vw 0 2vw;
+    z-index: 2;
     @media screen and (max-width: 500px) {
       height: 30px;
     }
     &:hover {
       cursor: pointer;
+    }
+    &.active {
+      img {
+        transform: rotate(180deg);
+      }
     }
     p {
       color: #fff;
@@ -32,6 +39,7 @@
     img {
       width: 24px;
       height: 14px;
+      transition: all 0.4s cubic-bezier(0.7, 0, 0.3, 1);
       @media screen and (max-width: 950px) {
         width: 19px;
         height: 11px;
@@ -43,19 +51,39 @@
     }
   }
   &__content {
-    background-color: #f6f6f6;
-    border-radius: 0 0 5px 5px;
-    padding: 2vw 12px 1.2vw 12px;
-    @media screen and (max-width: 500px) {
-      padding: 2.4vw 10px 1.2vw 10px;
-    }
+    max-height: 0;
+    opacity: 0;
+    z-index: -2;
+    padding: 0vw 12px 0vw 12px;
+    transition: all 0.3s ease-in-out;
     p {
+      visibility: hidden;
       font-size: calc(7px + 1.2vw);
+      transition: all 0.3s ease-in-out;
       @media screen and (min-width: 1440px) {
         font-size: 24px;
       }
       @media screen and (max-width: 500px) {
         font-size: 12px;
+      }
+    }
+    &.active {
+      visibility: visible;
+      max-height: 10vw;
+      height: auto;
+      opacity: 100%;
+      background-color: #f6f6f6;
+      border-radius: 0 0 5px 5px;
+      padding: 2vw 12px 1.2vw 12px;
+      @media screen and (max-width: 950px) {
+        max-height: 15vw;
+      }
+      @media screen and (max-width: 500px) {
+        padding: 2.4vw 12px 1.2vw 12px;
+        max-height: 20vw;
+      }
+      p {
+        visibility: visible;
       }
     }
   }

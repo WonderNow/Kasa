@@ -11,6 +11,9 @@ function About() {
       <main>
         <HeroBanner className="about-banner" />
         <Collapse />
+        <Collapse />
+        <Collapse />
+        <Collapse />
       </main>
       <Footer />
     </React.Fragment>
