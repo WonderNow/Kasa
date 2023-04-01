@@ -1,0 +1,83 @@
+.slider {
+  width: 86vw;
+  height: 40.5vh;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 25px;
+  background: #00000000;
+  @media screen and (max-width: 500px) {
+    width: 89vw;
+    height: 31.5vh;
+    border-radius: 10px;
+  }
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    &.active {
+      opacity: 1;
+    }
+  }
+  .keys {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 19%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    @media screen and (max-width: 500px) {
+      height: 8%;
+    }
+    .left-arrow,
+    .right-arrow {
+      display: flex;
+      cursor: pointer;
+      transition: transform 0.1s ease-in-out;
+    }
+    .left-arrow {
+      margin-left: 30px;
+      @media screen and (max-width: 500px) {
+        margin-left: 15px;
+      }
+      &:hover {
+        transform: scale(0.95);
+      }
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+    .right-arrow {
+      margin-right: 30px;
+      transform: rotate(180deg);
+      @media screen and (max-width: 500px) {
+        margin-right: 15px;
+      }
+      &:hover {
+        transform: rotate(180deg) scale(0.95);
+      }
+      &:active {
+        transform: rotate(180deg) scale(0.9);
+      }
+    }
+  }
+  .image-number {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-variant-numeric: tabular-nums;
+    @media screen and (max-width: 500px) {
+      display: none;
+    }
+  }
+}

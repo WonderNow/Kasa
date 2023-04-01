@@ -1,0 +1,7 @@
+.logement-main {
+  width: 86vw;
+  margin: 0 auto;
+  @media screen and (max-width: 500px) {
+    width: 89vw;
+  }
+}
