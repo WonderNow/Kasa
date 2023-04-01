@@ -29,7 +29,7 @@ function Carousel() {
     const totalImages = pictures.length;
 
     return (
-      <div className="carousel">
+      <section className="carousel">
         <div className="slider">
           <div className="keys">
             <div className="left-arrow" onClick={prevSlide}>
@@ -52,11 +52,11 @@ function Carousel() {
             {currentImageNumber}/{totalImages}
           </div>
         </div>
-      </div>
+      </section>
     );
   } else if (pictures.length === 1) {
     return (
-      <div className="carousel">
+      <section className="carousel">
         <div className="slider">
           <div className="slides">
             <div
@@ -66,7 +66,7 @@ function Carousel() {
             />
           </div>
         </div>
-      </div>
+      </section>
     );
   } else {
     return null; // Si la liste de `pictures` est vide, on ne renvoie rien
