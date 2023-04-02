@@ -1,5 +1,3 @@
-import { useParams } from 'react-router-dom'; // Importation de useParams pour récupérer l'ID dans l'URL
-import logements from '../assets/logements.json';
 import Collapse from './Collapse';
 import colorfulStar from '../assets/star-colorful.png';
 import grayStar from '../assets/star-gray.png';
@@ -14,18 +12,15 @@ function getStars(rating) {
   return stars;
 }
 
-function Details() {
-  const { id } = useParams(); // Obtention de l'ID grâce à l'URL actuelle
-  const logement = logements.find((l) => l.id === id); // Recherche du logement correspondant à l'ID
-  console.log(logement.host.picture);
+function Details(props) {
   return (
     <section className="details">
       <div className="details__head">
         <div className="details__head--left">
-          <h2>{logement.title}</h2>
-          <p>{logement.location}</p>
+          <h2>{props.title}</h2>
+          <p>{props.location}</p>
           <div className="tags">
-            {logement.tags.map((tag, index) => (
+            {props.tags.map((tag, index) => (
               <div className="tag" key={index}>
                 {tag}
               </div>
@@ -34,26 +29,26 @@ function Details() {
         </div>
         <div className="details__head--right">
           <div className="author-infos">
-            <p className="author_name">{logement.host.name}</p>
+            <p className="author_name">{props.hostName}</p>
             <div
               className="author__picture"
-              style={{ backgroundImage: `url(${logement.host.picture})` }}
+              style={{ backgroundImage: `url(${props.hostPic})` }}
             ></div>
           </div>
-          <div className="stars-rating">{getStars(logement.rating)}</div>
+          <div className="stars-rating">{getStars(props.rating)}</div>
         </div>
       </div>
       <div className="details__bottom">
         <Collapse
-          key={logement.id}
+          key={props.id}
           title="Description"
-          content={logement.description}
+          content={props.description}
         />
         <Collapse
           className="list"
-          key={logement.id}
+          key={props.id}
           title="Équipements"
-          content={logement.equipments.map((eq, index) => (
+          content={props.equipments.map((eq, index) => (
             <span key={index}>
               {eq}
               <br />
