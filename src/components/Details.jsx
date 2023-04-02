@@ -1,6 +1,18 @@
 import { useParams } from 'react-router-dom'; // Importation de useParams pour récupérer l'ID dans l'URL
 import logements from '../assets/logements.json';
 import Collapse from './Collapse';
+import colorfulStar from '../assets/star-colorful.png';
+import grayStar from '../assets/star-gray.png';
+
+function getStars(rating) {
+  let stars = [];
+  for (let i = 1; i <= 5; i++) {
+    const starImg = i <= rating ? colorfulStar : grayStar;
+    const altText = i <= rating ? `${i} étoiles sur 5` : `${i} étoile sur 5`;
+    stars.push(<img key={i} src={starImg} alt={altText} />);
+  }
+  return stars;
+}
 
 function Details() {
   const { id } = useParams(); // Obtention de l'ID grâce à l'URL actuelle
@@ -21,14 +33,14 @@ function Details() {
           </div>
         </div>
         <div className="details__head--right">
-          <div className="right-top">
+          <div className="author-infos">
             <p className="author_name">{logement.host.name}</p>
             <div
               className="author__picture"
               style={{ backgroundImage: `url(${logement.host.picture})` }}
             ></div>
           </div>
-          <div className="right-bottom">★★★★☆</div>
+          <div className="stars-rating">{getStars(logement.rating)}</div>
         </div>
       </div>
       <div className="details__bottom">
