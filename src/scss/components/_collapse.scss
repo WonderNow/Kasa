@@ -1,3 +1,7 @@
+.collapse-wrapper {
+  padding-bottom: 45px;
+}
+
 .collapse-container {
   width: 71vw;
   height: auto;
@@ -62,11 +66,16 @@
       font-size: calc(7px + 1.2vw);
       transition: all 0.3s ease-in-out;
       font-weight: 400;
+      line-height: 34px;
       @media screen and (min-width: 1440px) {
         font-size: 24px;
       }
+      @media screen and (max-width: 950px) {
+        line-height: 20px;
+      }
       @media screen and (max-width: 500px) {
         font-size: 12px;
+        line-height: 17px;
       }
     }
     &.active {

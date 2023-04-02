@@ -1,6 +1,7 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Carousel from '../components/Carousel';
+import Details from '../components/Details.jsx';
 
 function FicheLogement() {
   return (
@@ -8,6 +9,7 @@ function FicheLogement() {
       <Header />
       <main className="logement-main">
         <Carousel />
+        <Details />
       </main>
       <Footer />
     </div>
