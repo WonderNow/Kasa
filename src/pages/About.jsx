@@ -11,6 +11,7 @@ function About() {
       <Header />
       <main>
         <HeroBanner className="about-banner" />
+        {/* Créer autant de Collapse qu'il y a d'éléments dans le tableau aboutData grâce à la méthode map(). Chaque Collapse reçoit en props le titre et le contenu de l'élément du tableau aboutData correspondant. */}
         <div className="collapse-wrapper">
           {aboutData.map((item, index) => (
             <Collapse key={index} title={item.title} content={item.content} />

@@ -2,10 +2,13 @@ import Collapse from './Collapse';
 import colorfulStar from '../assets/star-colorful.png';
 import grayStar from '../assets/star-gray.png';
 
+// Fonction qui renvoie un tableau d'images d'étoiles en couleur ou grises
 function getStars(rating) {
   let stars = [];
   for (let i = 1; i <= 5; i++) {
+    // Utilisation de l'opérateur ternaire pour choisir l'image en fonction de la note
     const starImg = i <= rating ? colorfulStar : grayStar;
+    // Utilisation de l'opérateur ternaire pour choisir le texte alternatif en fonction de la note
     const altText = i <= rating ? `${i} étoiles sur 5` : `${i} étoile sur 5`;
     stars.push(<img key={i} src={starImg} alt={altText} />);
   }
