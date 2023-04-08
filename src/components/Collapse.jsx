@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 function Collapse(props) {
   // Définit un état pour stocker l'état actif du collapse
-  const [isActive, setIsActive] = useState(false); // On définit un état pour stocker l'état actif
+  const [isActive, setIsActive] = useState(false);
 
   // On inverse la valeur de l'état actif lorsque l'utilisateur clique sur l'élément
   const toggleCollapse = () => {
